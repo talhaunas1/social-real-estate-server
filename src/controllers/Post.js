@@ -1,4 +1,4 @@
-import Post from "../schemas/Post.js";
+import Post from "../schemas/Posts.js";
 
 export const getPosts = async (req, res) => {
   try {
@@ -13,7 +13,6 @@ export const addPosts = async (req, res) => {
   try {
     const post = await Post.create(req.body);
     res.json(post);
-    
   } catch (error) {
     res.send(error);
   }
